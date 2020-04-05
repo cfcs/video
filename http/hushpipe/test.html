@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiny test page</title>
+    <style>
+      body { font-family: sans-serif; }
+      .div_video_high { border: 1px solid; }
+      .friend_div { 
+        border: 4px solid;
+        margin: 10px 10px 10px 10px;
+        background-color: lightblue;
+      }
+
+    </style>
+
+    <!-- Adapter.js from Google, try to fix old/broken browsers -->
+    <script src="adapter.js"></script>
+    <script src="test.js"></script>
+
+  </head>
+  <body>
+    <p>
+      <fieldset>
+	<legend>Hushpipe controls</legend>
+	<button id="hush_newroom">New room + key</button>
+	<button id="hush_getkey">Clear</button>
+	<div>
+	  <label>Room key: </label><span id="hush_room_key_label"></span>
+	</div>
+	<button id="hush_camera_record">Record camera</button>
+	<button id="hush_camera_stop">STOP camera</button>
+	<button id="hush_camera_pause">PAUSE camera</button>
+	<button id="hush_camera_resume">RESUME camera</button>
+      </fieldset>
+    </p>
+
+
+    <form method="GET">
+      <label>JanusServer:
+	<input id="janusServer" name="janus"/></label>
+      <input type="submit" value="Go" /></form>
+    <p><label>Status: </label><span id="status"></span></p>
+
+    <p>
+      <button id="micButton">Share microphone</button>
+      <button id="screenButton">Share screen</button>
+      <button id="cameraButton">Share camera</button>
+    </p>
+
+    <fieldset>
+      <legend>Data messages</legend>
+      <div><label>Message count: </label><span id="messageCount"></span></div>
+      <button id="saveButton">Save</button>
+      <button id="clearButton">Clear</button>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mirror (you)</legend>
+      <div id="myface">
+      <div id="testface">
+
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Friends</legend>
+      <button id="hush_render_friends">update Friends</button>
+
+      <div id="friends">
+      </div>
+    </fieldset>
+
+    <!-- Below: Scripts that should run after <body> has been parsed -->
+
+  </body>
+</html>
